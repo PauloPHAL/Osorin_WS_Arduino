@@ -1,3 +1,5 @@
+#include "src/domain/motor.ino"
+
 #define pwm1 2 // Motor Direito
 #define ingA1 4 // Motor Direito
 #define ingB1 3 // Motor Direito
@@ -7,7 +9,7 @@
 #define ingB2 9 // Motor Esquerdo
 
 //mpu 6050
-
+/*
 class Motor{
   private:
     int pinoPwm;
@@ -48,6 +50,7 @@ class Motor{
       digitalWrite(this->pinoIngB, LOW);
     }
 };
+*/
 
 Motor motorDireito(pwm1, ingA1, ingB1);
 Motor motorEsquerdo(pwm2, ingA2, ingB2);
