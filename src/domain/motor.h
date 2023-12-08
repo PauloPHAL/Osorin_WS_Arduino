@@ -26,7 +26,7 @@ class Motor{
       digitalWrite(this->pinoIngA, HIGH);
       digitalWrite(this->pinoIngB, LOW);
     }
-
+    
     void rodarAntiHorario(){
       analogWrite(this->pinoPwm,this->pwm);
       digitalWrite(this->pinoIngA, LOW);
