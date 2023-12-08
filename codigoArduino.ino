@@ -1,4 +1,5 @@
-#include "src/domain/motor.ino"
+#include "src/domain/motor.h"
+
 
 #define pwm1 2 // Motor Direito
 #define ingA1 4 // Motor Direito
