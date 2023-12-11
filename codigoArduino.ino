@@ -1,13 +1,13 @@
 #include "src/domain/motor.h"
 
 
-#define pwm1 2 // Motor Direito
+#define pwm1 9 // Motor Direito
 #define ingA1 4 // Motor Direito
 #define ingB1 3 // Motor Direito
 
 #define pwm2 8 // Motor Esquerdo
-#define ingA2 10 // Motor Esquerdo
-#define ingB2 9 // Motor Esquerdo
+#define ingA2 6 // Motor Esquerdo
+#define ingB2 5 // Motor Esquerdo
 
 //mpu 6050
 
@@ -58,11 +58,11 @@ void controlarMovimento(char direcao, int tempo){
 }
 
 void andarFrente(int tempo){
-  motorDireito.setPwm(190);
-  motorEsquerdo.setPwm(190);
+  motorDireito.setPwm(128);
+  motorEsquerdo.setPwm(128);
 
   motorDireito.rodarHorario();
-  motorEsquerdo.rodarHorario();
+  motorEsquerdo.rodarAntiHorario();
 
   delay(tempo);  
   parar();
@@ -73,7 +73,7 @@ void andarTras(int tempo){
   motorEsquerdo.setPwm(128);
 
   motorDireito.rodarAntiHorario();
-  motorEsquerdo.rodarAntiHorario();
+  motorEsquerdo.rodarHorario();
 
   delay(tempo);  
   parar();
@@ -84,7 +84,7 @@ void virarEsquerda90(){
   motorEsquerdo.setPwm(255);
 
   motorDireito.rodarHorario();
-  motorEsquerdo.rodarAntiHorario();
+  motorEsquerdo.rodarHorario();
         
   delay(1200);  
   parar();
@@ -95,7 +95,7 @@ void virarDireita90(){
   motorEsquerdo.setPwm(255);
 
   motorDireito.rodarAntiHorario();
-  motorEsquerdo.rodarHorario();
+  motorEsquerdo.rodarAntiHorario();
       
   delay(1200);   
   parar();
