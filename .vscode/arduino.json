@@ -3,5 +3,5 @@
     "board": "arduino:avr:mega",
     "port": "/dev/ttyUSB0",
     "programmer": "arduinoisp",
-    "sketch": "codigoArduino.ino"
+    "sketch": "codigoArduino/codigoArduino.ino"
 }
